@@ -20,7 +20,7 @@ apiRouter.post('/sayHello', function(req, res) {
       outputs: [
         {
           simpleText: {
-            text: "This is a message received from the YY server."
+            text: "This is a message received from the AWS EC2 server."
           }
         }
       ]
