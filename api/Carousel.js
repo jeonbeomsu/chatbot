@@ -1,6 +1,6 @@
+const domain = "http://18.223.119.113:3000/";
+
 exports.data =  function(req, res) {
-    console.log(req.body);
-  
     const responseBody = {
       version: "2.0",
       template: {
@@ -10,59 +10,44 @@ exports.data =  function(req, res) {
               "type": "basicCard",
               "items": [
                 {
-                  "title": "보물상자",
-                  "description": "보물상자 안에는 뭐가 있을까",
+                  "title": "디바비바 미디움",
+                  "description": "1000원",
                   "thumbnail": {
-                    "imageUrl": "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg"
+                    "imageUrl": domain + "images/ListCard/diva_m.jpg"
                   },
                   "buttons": [
                     {
-                      "action": "message",
-                      "label": "열어보기",
-                      "messageText": "짜잔! 우리가 찾던 보물입니다"
+                      "label": "구매하기",
+                      "action": "webLink",
+                      "webLinkUrl": "http://www.yypharm.co.kr/product/product04.asp"
                     },
+                  ]
+                },
+                {
+                  "title": "디바비바 소프트",
+                  "description": "500원",
+                  "thumbnail": {
+                    "imageUrl": domain + "images/ListCard/diva_s.jpg"
+                  },
+                  "buttons": [
                     {
                       "action":  "webLink",
-                      "label": "구경하기",
-                      "webLinkUrl": "https://e.kakao.com/t/hello-ryan"
+                      "label": "구매하기",
+                      "webLinkUrl": "http://www.yypharm.co.kr/product/product04.asp"
                     }
                   ]
                 },
                 {
-                  "title": "보물상자2",
-                  "description": "보물상자2 안에는 뭐가 있을까",
+                  "title": "디바비바 하드",
+                  "description": "2000원",
                   "thumbnail": {
-                    "imageUrl": "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg"
+                    "imageUrl": domain + "images/ListCard/diva_h.jpg"
                   },
                   "buttons": [
                     {
-                      "action": "message",
-                      "label": "열어보기",
-                      "messageText": "짜잔! 우리가 찾던 보물입니다"
-                    },
-                    {
                       "action":  "webLink",
-                      "label": "구경하기",
-                      "webLinkUrl": "https://e.kakao.com/t/hello-ryan"
-                    }
-                  ]
-                },
-                {
-                  "title": "보물상자3",
-                  "description": "보물상자3 안에는 뭐가 있을까",
-                  "thumbnail": {
-                    "imageUrl": "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg"
-                  },
-                  "buttons": [
-                    {
-                      "action": "message",
-                      "label": "열어보기",
-                      "messageText": "짜잔! 우리가 찾던 보물입니다"
-                    },
-                    {
-                      "action":  "webLink",
-                      "label": "구경하기",
-                      "webLinkUrl": "https://e.kakao.com/t/hello-ryan"
+                      "label": "구매하기",
+                      "webLinkUrl": "http://www.yypharm.co.kr/product/product04.asp"
                     }
                   ]
                 }
