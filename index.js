@@ -30,6 +30,26 @@ apiRouter.post('/sayHello', function(req, res) {
   res.status(200).send(responseBody);
 });
 
+apiRouter.post('/sawoninfo', function(req, res) {
+  const user_name = req.body.user_name;
+  console.log(req.body);
+
+  const responseBody = {
+    version: "2.0",
+    template: {
+      outputs: [
+        {
+          simpleText: {
+            text: user_name + " 님은 유영제약 사람입니다."
+          }
+        }
+      ]
+    }
+  };
+
+  res.status(200).send(responseBody);
+});
+
 apiRouter.post('/BasicCard', function(req, res) {
   console.log(req.body);
 
