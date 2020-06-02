@@ -31,7 +31,7 @@ apiRouter.post('/sayHello', function(req, res) {
 });
 
 apiRouter.post('/sawoninfo', function(req, res) {
-  const user_name = req.body.action.params.user_name;
+  const user_name = req.body.action.params.sys_person_name;
   //console.log(req.body);
 
   const responseBody = {
