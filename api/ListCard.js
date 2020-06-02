@@ -1,7 +1,6 @@
 // 전역 변수
 
-const domain = "http://18.223.119.113:3000/";
-
+var domain = "http://18.223.119.113:3000/";
 
 exports.data = function(req, res) {
     console.log(req.body);
