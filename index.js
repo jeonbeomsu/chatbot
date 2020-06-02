@@ -31,8 +31,8 @@ apiRouter.post('/sayHello', function(req, res) {
 });
 
 apiRouter.post('/sawoninfo', function(req, res) {
-  const user_name = req.body.user_name;
-  console.log(req.body);
+  const user_name = req.body.action.params.user_name;
+  //console.log(req.body);
 
   const responseBody = {
     version: "2.0",
