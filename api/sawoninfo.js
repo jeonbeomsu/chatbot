@@ -28,6 +28,14 @@ exports.data = function(req, res) {
                   "text": result_text
                 }
               }
+            ],
+            quickReplies: [
+              {
+                "label": "다시 검색",
+                "action": "block",
+                "messageText": "사원 정보 조회",
+                "blockId": req.body.userRequest.block.id
+              }
             ]
           }
         };

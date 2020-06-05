@@ -35,6 +35,13 @@ exports.data = function(req, res) {
             ]
           }
         }
+      ],
+      quickReplies: [
+        {
+          "label": "이전",
+          "action": "message",
+          "messageText": "시작"
+        }
       ]
     }
   };
