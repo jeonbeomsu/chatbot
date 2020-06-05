@@ -15,7 +15,7 @@ exports.data = function(req, res) {
         }
         else{
           for(var i=0; i< len; i++){
-            result_text += result.recordset[i].EMP_NM + "님은 " + result.recordset[i].H_DEPT_NM + " " + result.recordset[i].DEPT_NM + " " + result.recordset[i].PART_NM + " 입니다.<br>";
+            result_text += result.recordset[i].EMP_NM + "님은 " + result.recordset[i].H_DEPT_NM + " " + result.recordset[i].DEPT_NM + " " + result.recordset[i].PART_NM + " 입니다.\n";
           }
         }
 
