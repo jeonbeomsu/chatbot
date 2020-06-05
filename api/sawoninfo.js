@@ -1,5 +1,7 @@
 exports.data = function(req, res) {
-    const user_name = req.body.action.params.sys_person_name;
+    var user_name = req.body.action.params.sys_person_name;
+    console.log(req.body.action.params.sys_person_name);
+
     var result_text = "";
 
     sql.connect(config).then( pool => {
