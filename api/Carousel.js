@@ -51,13 +51,6 @@ exports.data =  function(req, res) {
                 }
               ]
             }
-          },
-          {
-            "quickreplies": {
-              "label": "이전",
-              "action": "message",
-              "messageText": "시작"
-            }
           }
         ]
       }

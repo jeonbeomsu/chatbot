@@ -27,13 +27,6 @@ exports.data = function(req, res) {
                 "simpleText": {
                   "text": result_text
                 }
-              },
-              {
-                "quickreplies": {
-                  "label": "이전",
-                  "action": "message",
-                  "messageText": "시작"
-                }
               }
             ]
           }
