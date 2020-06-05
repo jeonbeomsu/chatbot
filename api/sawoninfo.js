@@ -33,6 +33,7 @@ exports.data = function(req, res) {
         };
 
         res.status(200).send(responseBody);
+        res.end();
       })
       .catch(err => {
           console.log(err.message);
