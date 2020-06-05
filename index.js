@@ -30,7 +30,9 @@ apiRouter.post('/Carousel', Carousel.data);
 
 
 
-// static serving 
+// Gloabal Variable
+var domain = "http://218.38.191.120:3000/";
+global.domain = domain;
 
 
 app.listen(3000, function() {

@@ -1,5 +1,3 @@
-const domain = "http://18.223.119.113:3000/";
-
 exports.data =  function(req, res) {
     const responseBody = {
       version: "2.0",
