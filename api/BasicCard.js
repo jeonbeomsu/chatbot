@@ -32,12 +32,12 @@ exports.data = function(req, res) {
                 "label": "홈페이지(웹링크형)",
                 "webLinkUrl": "http://www.yypharm.co.kr/"
               }
-            ]
-          },
-          "QuickReplies": {
-            "label": "이전",
-            "action": "message",
-            "messageText": "시작",
+            ],
+            "QuickReplies": {
+              "label": "이전",
+              "action": "message",
+              "messageText": "시작",
+            }
           }
         }
       ]

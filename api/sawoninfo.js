@@ -25,12 +25,12 @@ exports.data = function(req, res) {
             outputs: [
               {
                 "simpleText": {
-                  "text": result_text
-                },
-                "QuickReplies": {
-                  "label": "이전",
-                  "action": "message",
-                  "messageText": "시작",
+                  "text": result_text,
+                  "QuickReplies": {
+                    "label": "이전",
+                    "action": "message",
+                    "messageText": "시작",
+                  }
                 }
               }
             ]

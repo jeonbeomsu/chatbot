@@ -41,12 +41,12 @@ exports.data = function(req, res) {
                   "action": "webLink",
                   "webLinkUrl": "http://www.yypharm.co.kr/product/product03.asp"
                 }
-              ]
-            },
-            "QuickReplies": {
-              "label": "이전",
-              "action": "message",
-              "messageText": "시작",
+              ],
+              "QuickReplies": {
+                "label": "이전",
+                "action": "message",
+                "messageText": "시작",
+              }
             }
           }
         ]
