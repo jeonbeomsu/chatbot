@@ -14,6 +14,14 @@ app.use(bodyParser.urlencoded({
 
 app.use('/api', apiRouter);
 
+// [Server Config]
+global.sql = require('mssql');
+global.config = {
+user: 'sa',
+password: 'sfaadmin',
+server: '192.168.0.14',
+database: 'mdb'
+};
 
 
 var say = require('./api/sayHello');
