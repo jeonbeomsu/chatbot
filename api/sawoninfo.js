@@ -1,6 +1,4 @@
 exports.data = function(req, res) {
-  
-    console.log(req.body);
     const user_name = req.body.action.params.sys_person_name;
     var result_text = "";
 
@@ -33,7 +31,7 @@ exports.data = function(req, res) {
         };
 
         res.status(200).send(responseBody);
-        res.end();
+        sql.close();
       })
       .catch(err => {
           console.log(err.message);
