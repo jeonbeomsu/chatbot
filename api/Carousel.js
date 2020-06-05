@@ -50,6 +50,11 @@ exports.data =  function(req, res) {
                   ]
                 }
               ]
+            },
+            "QuickReplies": {
+              "label": "이전",
+              "action": "message",
+              "messageText": "시작",
             }
           }
         ]

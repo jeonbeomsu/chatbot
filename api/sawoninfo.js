@@ -24,8 +24,13 @@ exports.data = function(req, res) {
           template: {
             outputs: [
               {
-                simpleText: {
-                  text: result_text
+                "simpleText": {
+                  "text": result_text
+                },
+                "QuickReplies": {
+                  "label": "이전",
+                  "action": "message",
+                  "messageText": "시작",
                 }
               }
             ]

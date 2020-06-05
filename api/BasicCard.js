@@ -33,6 +33,11 @@ exports.data = function(req, res) {
                 "webLinkUrl": "http://www.yypharm.co.kr/"
               }
             ]
+          },
+          "QuickReplies": {
+            "label": "이전",
+            "action": "message",
+            "messageText": "시작",
           }
         }
       ]
