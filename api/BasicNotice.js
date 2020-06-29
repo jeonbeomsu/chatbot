@@ -25,7 +25,7 @@ exports.data = function(req, res) {
               {
                 "action":  "webLink",
                 "label": "공지 확인하기 》",
-                "webLinkURL": "http://mgw.yypharm.co.kr/hotnews/main.aspx"
+                "webLinkUrl": "http://mgw.yypharm.co.kr/hotnews/main.aspx"
               }
             ]
           }
