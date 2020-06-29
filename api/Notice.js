@@ -7,14 +7,14 @@ exports.data = function(req, res) {
       outputs: [
         {
           "basicCard": {
-            "title": "",
-            "description": "유영제약의 공지사항을 한 눈에 볼 수 있는 메뉴입니다.",
+            "title": "유영상자",
+            "description": "유영상자 안에는 뭐가 있을까?",
             "thumbnail": {
-              "imageUrl": domain + "images/Notice/notice.jpg",
+              "imageUrl": "http://k.kakaocdn.net/dn/83BvP/bl20duRC1Q1/lj3JUcmrzC53YIjNDkqbWK/i_6piz1p.jpg"
             },
             "profile": {
-              "imageUrl": "",
-              "nickname": "유영제약공지사항"
+              "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4BJ9LU4Ikr_EvZLmijfcjzQKMRCJ2bO3A8SVKNuQ78zu2KOqM",
+              "nickname": "보물상자"
             },
             "social": {
               "like": 1238,
@@ -23,10 +23,15 @@ exports.data = function(req, res) {
             },
             "buttons": [
               {
-                "action": "osLink",
-                "label": "공지사항 확인하기 》",
-                "osLink": ""
+                "action": "message",
+                "label": "시작(메시지형)",
+                "messageText": "시작"
               },
+              {
+                "action":  "webLink",
+                "label": "홈페이지(웹링크형)",
+                "webLinkUrl": "http://www.yypharm.co.kr/"
+              }
             ]
           }
         }
