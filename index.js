@@ -29,14 +29,14 @@ var sawoninfo = require('./api/sawoninfo');
 var BasicCard = require('./api/BasicCard');
 var ListCard = require('./api/ListCard');
 var Carousel = require('./api/Carousel');
-var Notice = require('./api/Notice');
+var notice = require('./api/notice');
 
 apiRouter.post('/sayHello', say.data);
 apiRouter.post('/sawoninfo', sawoninfo.data);
 apiRouter.post('/BasicCard', BasicCard.data);
 apiRouter.post('/ListCard', ListCard.data);
 apiRouter.post('/Carousel', Carousel.data);
-apiRouter.post('/Notice', Notice.data);
+apiRouter.post('/notice', notice.data);
 
 
 
