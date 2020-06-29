@@ -23,9 +23,9 @@ exports.data = function(req, res) {
             },
             "buttons": [
               {
-                "action":  "osLink",
+                "action":  "webLink",
                 "label": "공지 확인하기 》",
-                "osLink": "http://www.yypharm.co.kr/"
+                "webLinkURL": "http://www.yypharm.co.kr/"
               }
             ]
           }
