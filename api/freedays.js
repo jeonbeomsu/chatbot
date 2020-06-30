@@ -18,7 +18,7 @@ exports.data = function(req, res) {
     console.log(req.body.action.params.cal_type);
 
     var result_text = "";
-    var query     = "SELECT CONVERT(VARCHAR(10),CONVERT(DATE, CALYMD),23) : ";
+    var query     = "SELECT CONVERT(VARCHAR(10),CONVERT(DATE, CALYMD),23) + ' : ' ";
                 query = query + "+ CASE CALNO ";
                 query = query + "WHEN '03' THEN '국경일'		+ REPLICATE(' ', 7 - LEN('국경일')) ";
                 query = query + "WHEN '04' THEN '창립기념일' + REPLICATE(' ', 7 - LEN('창립기념일')) ";
