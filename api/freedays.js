@@ -1,11 +1,15 @@
 exports.data = function(req, res) {
-    var temp = req.body.action.params.sys_date_period;
-    var yyyy = temp.to.year;
+    var temp = '';
+    var yyyy = ''; 
     
     var moment = require('moment');
 
-    if (yyyy === undefined ){
+    if (req.body.action.params.sys_date_period === undefined ){
       yyyy = moment().format("YYYY");  
+    }
+    else{
+      temp = JSON.parse(req.body.action.params.sys_date_period);
+      yyyy = temp.to.year;
     }
 
     var type = '';
