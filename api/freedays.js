@@ -71,7 +71,7 @@ exports.data = function(req, res) {
               {
                 "label": "다시 검색",
                 "action": "block",
-                "messageText": "공휴일",
+                "messageText": yyyy + "공휴일",
                 "blockId": req.body.userRequest.block.id
               }
             ]
