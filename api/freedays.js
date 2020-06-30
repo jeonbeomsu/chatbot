@@ -1,6 +1,12 @@
 exports.data = function(req, res) {
     var yymm = req.body.action.params.sys_plugin_date;
     console.log(req.body.action.params.sys_plugin_date);
+    var moment = require('moment');
+
+    if (yymm === undefined ){
+      yymm = moment().format("YYYY");  
+    }
+
     var type = '';
 
     if (req.body.action.params.cal_type === '본사') {
@@ -8,7 +14,6 @@ exports.data = function(req, res) {
     }else{
       type = '20';
     }
-
     
     console.log(req.body.action.params.cal_type);
 
