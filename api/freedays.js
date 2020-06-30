@@ -1,5 +1,5 @@
 exports.data = function(req, res) {
-    var yyyy = req.body.action.params.sys_plugin_date;
+    var yyyy = req.body.action.params.yyyy;
     
     var moment = require('moment');
 
