@@ -1,6 +1,6 @@
 exports.data = function(req, res) {
-    
-    var yyyy = req.body.action.params.sys_date_period.to;
+    var temp = Json.Parse(req.body.action.params.sys_date_period);
+    var yyyy = temp.to.year;
     
     var moment = require('moment');
 
