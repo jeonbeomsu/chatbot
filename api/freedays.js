@@ -10,9 +10,9 @@ exports.data = function(req, res) {
     var type = '';
 
     if (req.body.action.params.cal_type === '본사') {
-      type = '10';
+      type = 10;
     }else{
-      type = '20';
+      type = 20;
     }
     
     console.log(req.body.action.params.cal_type);
