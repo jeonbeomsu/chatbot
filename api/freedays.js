@@ -1,6 +1,6 @@
 exports.data = function(req, res) {
     var yymm = req.body.action.params.sys_plugin_date;
-    console.log(req.body.action.params.sys_plugin_date);
+    
     var moment = require('moment');
 
     if (yymm === undefined ){
@@ -14,8 +14,8 @@ exports.data = function(req, res) {
     }else{
       type = 20;
     }
-    
-    console.log(req.body.action.params.cal_type);
+    console.log(yymm);
+    console.log(type);
 
     var result_text = "";
     var query     = "SELECT CONVERT(VARCHAR(10),CONVERT(DATE, CALYMD),23) + ' : ' ";
@@ -32,7 +32,7 @@ exports.data = function(req, res) {
     sql.connect(config).then( pool => {
       pool.request()
       .input('CALYMD', yymm)
-      .input('CALTYPE', type)
+      .input('CAL_TYPE', type)
       .query(query)
       .then(result => {
         var len = result.recordset.length;
