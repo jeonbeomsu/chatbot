@@ -58,6 +58,12 @@ exports.data = function(req, res) {
             ],
             quickReplies: [
               {
+                "label": "홈",
+                "action": "block",
+                "messageText": "홈",
+                "blockId": req.body.userRequest.block.id
+              },
+              {
                 "label": "다시 검색",
                 "action": "block",
                 "messageText": "공휴일",
