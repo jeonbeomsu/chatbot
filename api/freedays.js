@@ -40,7 +40,7 @@ exports.data = function(req, res) {
           result_text = "검색되는 휴일이 없습니다.";
         }
         else{
-          result_text = '◆ ' + yymm + '년 휴일 ◆\n';
+          result_text = '◆ ' + yyyy + '년 휴일 ◆\n';
           for(var i=0; i< len; i++){
             result_text += result.recordset[i].DAY_NM  + "\n";
           }
