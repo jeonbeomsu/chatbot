@@ -1,10 +1,10 @@
 exports.data = function(req, res) {
-    var yymm = req.body.action.params.sys_plugin_date;
+    var yyyy = req.body.action.params.yyyy;
     
     var moment = require('moment');
 
-    if (yymm === undefined ){
-      yymm = moment().format("YYYY");  
+    if (yyyy === undefined ){
+      yyyy = moment().format("YYYY");  
     }
 
     var type = '';
@@ -14,7 +14,7 @@ exports.data = function(req, res) {
     }else{
       type = 20;
     }
-    console.log(yymm);
+    console.log(yyyy);
     console.log(type);
 
     var result_text = "";
@@ -31,7 +31,7 @@ exports.data = function(req, res) {
 
     sql.connect(config).then( pool => {
       pool.request()
-      .input('CALYMD', yymm)
+      .input('CALYMD', yyyy)
       .input('CAL_TYPE', type)
       .query(query)
       .then(result => {
