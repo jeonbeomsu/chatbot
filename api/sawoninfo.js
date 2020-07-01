@@ -3,19 +3,28 @@ exports.data = function(req, res) {
     console.log(req.body.action.params.sys_person_name);
 
     var result_text = "";
+    var len = 0;
+
+    var buttons = new Array();
+    var button = new Object();
 
     sql.connect(config).then( pool => {
       pool.request()
       .input('EMP_NM', user_name)
       .execute('EMPINFO')
       .then(result => {
-        var len = result.recordset.length;
+        len = result.recordset.length;
         if(len === 0){
           result_text = user_name + "님은 유영제약 사람이 아닙니다.";
         }
         else{
+          result_text = "총 " + len + "명의 직원이 검색되었습니다."
           for(var i=0; i< len; i++){
-            result_text += result.recordset[i].EMP_NM + "님은 " + result.recordset[i].H_DEPT_NM + " " + result.recordset[i].DEPT_NM + " " + result.recordset[i].PART_NM + " 입니다.\n";
+            button = new Object();
+            button.action = "webLink";
+            button.label = result.recordset[i].DEPT_NM + "/" + result.recordset[i].EMP_NM;
+            button.webLinkUrl = "http://gw.yypharm.co.kr/_CMON/CMONUserInfo.aspx?userid=" + result.recordset[i].EMP_CD;
+            buttons.push(button);
           }
         }
 
@@ -24,8 +33,15 @@ exports.data = function(req, res) {
           template: {
             outputs: [
               {
-                "simpleText": {
-                  "text": result_text
+                "basicCard": {
+                  "title": result_text,
+                  "description": "최대 3명의 동명 직원만 조회됩니다.",
+                  "social": {
+                    "like": 1238,
+                    "comment": 8,
+                    "share": 780
+                  },
+                  "buttons": buttons
                 }
               }
             ],
