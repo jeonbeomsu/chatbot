@@ -24,6 +24,7 @@ database: 'mdb'
 };
 
 
+var main = require('./api/main');
 var say = require('./api/sayHello');
 var sawoninfo = require('./api/sawoninfo');
 var BasicCard = require('./api/BasicCard');
@@ -33,6 +34,7 @@ var BasicNotice = require('./api/BasicNotice');
 var freedays = require('./api/freedays');
 var resource = require('./api/resource');
 
+apiRouter.post('/main',main.data);
 apiRouter.post('/sayHello', say.data);
 apiRouter.post('/sawoninfo', sawoninfo.data);
 apiRouter.post('/BasicCard', BasicCard.data);
