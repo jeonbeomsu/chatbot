@@ -37,6 +37,7 @@ var ListCard = require('./api/ListCard');
 var Carousel = require('./api/Carousel');
 var BasicNotice = require('./api/BasicNotice');
 var freedays = require('./api/freedays');
+var mydays = require('./api/mydays');
 var resource = require('./api/resource');
 
 
@@ -47,6 +48,7 @@ apiRouter.post('/ListCard', ListCard.data);
 apiRouter.post('/Carousel', Carousel.data);
 apiRouter.post('/BasicNotice', BasicNotice.data);
 apiRouter.post('/freedays', freedays.data);
+apiRouter.post('/mydays', mydays.data);
 apiRouter.post('/resource', resource.data);
 
 
