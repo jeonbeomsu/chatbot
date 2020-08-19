@@ -19,7 +19,7 @@ exports.data = function(req, res) {
           result_text = "해당 사원이 존재하지 않습니다.";
         }
         else{
-          result_text += "발생연차(" + result.recordset[0].cnt + ") + 선사용연차(" + result_recordset[0].pre_over_cnt + ") = 사용가능연차(" + result_recordset[0].avail_cnt + ")\n";
+          result_text += "발생연차(" + result.recordset[0].cnt + ") + 선사용연차(" + result.recordset[0].pre_over_cnt + ") = 사용가능연차(" + result.recordset[0].avail_cnt + ")\n";
           result_text += "---------------- 사용연차 List --------------------\n"
           if(result.recordset[0].rest_cnt_01.len !== 0){
             result_text += result.recordset[0].rest_cnt_01 + ' ' + result.recordset[0].rest_cnt_02 + ' ' + result.recordset[0].rest_cnt_03 + ' ' + result.recordset[0].rest_cnt_04
@@ -41,7 +41,7 @@ exports.data = function(req, res) {
             result_text += result.recordset[0].rest_cnt_29 + ' ' + result.recordset[0].rest_cnt_30 + "/n"
           }
           result_text += "---------------------------------------------------\n"
-          result_text += "사용가능연차(" + result.recordset[0].avail_cnt + ") - 사용연차(" + result_recordset[0].use_cnt + ") = 잔여연차(" + result_recordset[0].jan_cnt + ")\n";
+          result_text += "사용가능연차(" + result.recordset[0].avail_cnt + ") - 사용연차(" + result.recordset[0].use_cnt + ") = 잔여연차(" + result.recordset[0].jan_cnt + ")\n";
         }
 
         const responseBody = {
