@@ -22,27 +22,27 @@ exports.data = function(req, res) {
           result_text += "발생연차(" + result.recordset[0].cnt + ") + 선사용(" + result.recordset[0].PRE_OVER_CNT + ")\n" 
           result_text += "= 사용가능(" + result.recordset[0].avail_cnt + ")\n";
           result_text += "------- 사용연차 List -------\n"
-          if(result.recordset[0].rest_cnt_01.len !== undefined){
+          if(result.recordset[0].rest_cnt_01 !== undefined){
             result_text += result.recordset[0].rest_cnt_01 + ' ' + result.recordset[0].rest_cnt_02 + ' ' + result.recordset[0].rest_cnt_03 + ' ' 
                         + result.recordset[0].rest_cnt_04 + ' ' + result.recordset[0].rest_cnt_05 + "\n"
           }
-          if(result.recordset[0].rest_cnt_06.len !== undefined){
+          if(result.recordset[0].rest_cnt_06 !== undefined){
             result_text += result.recordset[0].rest_cnt_06 + ' ' + result.recordset[0].rest_cnt_07 + ' ' + result.recordset[0].rest_cnt_08 + ' ' 
                         + result.recordset[0].rest_cnt_09 + ' ' + result.recordset[0].rest_cnt_10 + "\n"
           }
-          if(result.recordset[0].rest_cnt_11.len !== undefined){
+          if(result.recordset[0].rest_cnt_11 !== undefined){
             result_text += result.recordset[0].rest_cnt_11 + ' ' + result.recordset[0].rest_cnt_12 + ' ' + result.recordset[0].rest_cnt_13 + ' ' 
                         + result.recordset[0].rest_cnt_14 + ' ' + result.recordset[0].rest_cnt_15 + "\n"
           }
-          if(result.recordset[0].rest_cnt_16.len !== undefined){
+          if(result.recordset[0].rest_cnt_16 !== undefined){
             result_text += result.recordset[0].rest_cnt_16 + ' ' + result.recordset[0].rest_cnt_17 + ' ' + result.recordset[0].rest_cnt_18 + ' ' 
                         + result.recordset[0].rest_cnt_19 + ' ' + result.recordset[0].rest_cnt_20 + "\n"
           }
-          if(result.recordset[0].rest_cnt_21.len !== undefined){
+          if(result.recordset[0].rest_cnt_21 !== undefined){
             result_text += result.recordset[0].rest_cnt_21 + ' ' + result.recordset[0].rest_cnt_22 + ' ' + result.recordset[0].rest_cnt_23 + ' ' 
                         + result.recordset[0].rest_cnt_24 + ' ' + result.recordset[0].rest_cnt_25 + "\n"
           }
-          if(result.recordset[0].rest_cnt_26.len !== undefined){
+          if(result.recordset[0].rest_cnt_26 !== undefined){
             result_text += result.recordset[0].rest_cnt_26 + ' ' + result.recordset[0].rest_cnt_27 + ' ' + result.recordset[0].rest_cnt_28 + ' ' 
                         + result.recordset[0].rest_cnt_29 + ' ' + result.recordset[0].rest_cnt_30 + "\n"
           }
