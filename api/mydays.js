@@ -47,7 +47,7 @@ exports.data = function(req, res) {
           }
           result_text += "---------------------------\n"
           
-          result_text += "사용가능연차(" + result.recordset[0].avail_cnt + ") + 사용연차(" + result.recordset[0].use_cnt + ")\n" 
+          result_text += "사용가능연차(" + result.recordset[0].avail_cnt + ") - 사용연차(" + result.recordset[0].use_cnt + ")\n" 
           result_text += "= 잔여연차(" + result.recordset[0].jan_cnt + ")\n";
 
 
