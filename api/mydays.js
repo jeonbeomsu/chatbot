@@ -19,29 +19,37 @@ exports.data = function(req, res) {
           result_text = "해당 사원이 존재하지 않습니다.";
         }
         else{
-          result_text += "발생연차(" + result.recordset[0].cnt + ") + 선사용연차(" + result.recordset[0].pre_over_cnt + ") = 사용가능연차(" + result.recordset[0].avail_cnt + ")\n";
-          result_text += "---------------- 사용연차 List --------------------\n"
+          result_text += "발생연차(" + result.recordset[0].cnt + ") + 선사용(" + result.recordset[0].PRE_OVER_CNT + ")\n" 
+          result_text += "= 사용가능(" + result.recordset[0].avail_cnt + ")\n";
+          result_text += "------- 사용연차 List -------\n"
           if(result.recordset[0].rest_cnt_01.len !== 0){
-            result_text += result.recordset[0].rest_cnt_01 + ' ' + result.recordset[0].rest_cnt_02 + ' ' + result.recordset[0].rest_cnt_03 + ' ' + result.recordset[0].rest_cnt_04
-                        + ' ' + result.recordset[0].rest_cnt_05 + ' ' + result.recordset[0].rest_cnt_06 + ' ' + result.recordset[0].rest_cnt_07 + "/n"
+            result_text += result.recordset[0].rest_cnt_01 + ' ' + result.recordset[0].rest_cnt_02 + ' ' + result.recordset[0].rest_cnt_03 + ' ' 
+                        + result.recordset[0].rest_cnt_04 + ' ' + result.recordset[0].rest_cnt_05 + "\n"
           }
-          if(result.recordset[0].rest_cnt_08.len !== 0){
-            result_text += result.recordset[0].rest_cnt_08 + ' ' + result.recordset[0].rest_cnt_09 + ' ' + result.recordset[0].rest_cnt_10 + ' ' + result.recordset[0].rest_cnt_11
-                        + ' ' + result.recordset[0].rest_cnt_12 + ' ' + result.recordset[0].rest_cnt_13 + ' ' + result.recordset[0].rest_cnt_14 + "/n"
+          if(result.recordset[0].rest_cnt_06.len !== 0){
+            result_text += result.recordset[0].rest_cnt_06 + ' ' + result.recordset[0].rest_cnt_07 + ' ' + result.recordset[0].rest_cnt_08 + ' ' 
+                        + result.recordset[0].rest_cnt_09 + ' ' + result.recordset[0].rest_cnt_10 + "\n"
           }
-          if(result.recordset[0].rest_cnt_15.len !== 0){
-            result_text += result.recordset[0].rest_cnt_15 + ' ' + result.recordset[0].rest_cnt_16 + ' ' + result.recordset[0].rest_cnt_17 + ' ' + result.recordset[0].rest_cnt_18
-                        + ' ' + result.recordset[0].rest_cnt_19 + ' ' + result.recordset[0].rest_cnt_20 + ' ' + result.recordset[0].rest_cnt_21 + "/n"
+          if(result.recordset[0].rest_cnt_11.len !== 0){
+            result_text += result.recordset[0].rest_cnt_11 + ' ' + result.recordset[0].rest_cnt_12 + ' ' + result.recordset[0].rest_cnt_13 + ' ' 
+                        + result.recordset[0].rest_cnt_14 + ' ' + result.recordset[0].rest_cnt_15 + "\n"
           }
-          if(result.recordset[0].rest_cnt_22.len !== 0){
-            result_text += result.recordset[0].rest_cnt_22 + ' ' + result.recordset[0].rest_cnt_23 + ' ' + result.recordset[0].rest_cnt_24 + ' ' + result.recordset[0].rest_cnt_25
-                        + ' ' + result.recordset[0].rest_cnt_26 + ' ' + result.recordset[0].rest_cnt_27 + ' ' + result.recordset[0].rest_cnt_28 + "/n"
+          if(result.recordset[0].rest_cnt_16.len !== 0){
+            result_text += result.recordset[0].rest_cnt_16 + ' ' + result.recordset[0].rest_cnt_17 + ' ' + result.recordset[0].rest_cnt_18 + ' ' 
+                        + result.recordset[0].rest_cnt_19 + ' ' + result.recordset[0].rest_cnt_20 + "\n"
           }
-          if(result.recordset[0].rest_cnt_29.len !== 0){
-            result_text += result.recordset[0].rest_cnt_29 + ' ' + result.recordset[0].rest_cnt_30 + "/n"
+          if(result.recordset[0].rest_cnt_21.len !== 0){
+            result_text += result.recordset[0].rest_cnt_21 + ' ' + result.recordset[0].rest_cnt_22 + ' ' + result.recordset[0].rest_cnt_23 + ' ' 
+                        + result.recordset[0].rest_cnt_24 + ' ' + result.recordset[0].rest_cnt_25 + "\n"
           }
-          result_text += "---------------------------------------------------\n"
-          result_text += "사용가능연차(" + result.recordset[0].avail_cnt + ") - 사용연차(" + result.recordset[0].use_cnt + ") = 잔여연차(" + result.recordset[0].jan_cnt + ")\n";
+          if(result.recordset[0].rest_cnt_26.len !== 0){
+            result_text += result.recordset[0].rest_cnt_26 + ' ' + result.recordset[0].rest_cnt_27 + ' ' + result.recordset[0].rest_cnt_28 + ' ' 
+                        + result.recordset[0].rest_cnt_29 + ' ' + result.recordset[0].rest_cnt_30 + "\n"
+          }
+          result_text += "-----------------------------\n"
+          
+          result_text += "사용가능연차(" + result.recordset[0].avail_cnt + ") + 사용연차(" + result.recordset[0].use_cnt + ")\n" 
+          result_text += "= 잔여연차(" + result.recordset[0].jan_cnt + ")\n";
         }
 
         const responseBody = {
