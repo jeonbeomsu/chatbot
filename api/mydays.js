@@ -52,7 +52,7 @@ exports.data = function(req, res) {
           result_text += "= 잔여연차(" + result.recordset[0].jan_cnt + ")\n";
 
 
-          console.log(result.recordset[0].rest_cnt_26.len);
+          console.log(result.recordset[0].rest_cnt_26);
         }
 
         const responseBody = {
@@ -66,12 +66,6 @@ exports.data = function(req, res) {
               }
             ],
             quickReplies: [
-              {
-                "label": "홈",
-                "action": "block",
-                "messageText": "홈",
-                "blockId": req.body.userRequest.block.id
-              },
               {
                 "label": "다시 검색",
                 "action": "block",
