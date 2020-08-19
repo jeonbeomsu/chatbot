@@ -46,10 +46,13 @@ exports.data = function(req, res) {
             result_text += result.recordset[0].rest_cnt_26 + ' ' + result.recordset[0].rest_cnt_27 + ' ' + result.recordset[0].rest_cnt_28 + ' ' 
                         + result.recordset[0].rest_cnt_29 + ' ' + result.recordset[0].rest_cnt_30 + "\n"
           }
-          result_text += "-----------------------------\n"
+          result_text += "---------------------------\n"
           
           result_text += "사용가능연차(" + result.recordset[0].avail_cnt + ") + 사용연차(" + result.recordset[0].use_cnt + ")\n" 
           result_text += "= 잔여연차(" + result.recordset[0].jan_cnt + ")\n";
+
+          
+          console.log(result.recordset[0].rest_cnt_26.len);
         }
 
         const responseBody = {
