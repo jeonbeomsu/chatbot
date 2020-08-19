@@ -9,7 +9,7 @@ exports.data = function(req, res) {
     sql.connect(config).then( pool => {
       pool.request()
       .input('work_yy', yyyy)
-      .input('detp_cd', '%')
+      .input('dept_cd', '%')
       .input('emp_cd', emp_cd)
       .input('s_dept_cd', '%')
       .execute('SPPS_PS120S01')
