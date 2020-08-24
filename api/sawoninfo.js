@@ -2,7 +2,7 @@ exports.data = function(req, res) {
     var user_name = req.body.action.params.sys_person_name;
 
 
-    console.log(req.body);
+    console.log(req.body.userRequest.user);
 
 
     var result_text = "";
