@@ -2,7 +2,7 @@ exports.data = function(req, res) {
     var user_name = req.body.action.params.sys_person_name;
 
 
-    console.log(req.body.userRequest.user.properties.plusfriendUserKey);
+    console.log(req.body.userRequest.user.id);
 
 
     var result_text = "";
