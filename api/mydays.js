@@ -13,9 +13,9 @@ exports.data = function(req, res) {
       .input('s_dept_cd', '%')
       .execute('SPPS_PS120S01')
       .then(result => {
-        console.log(result.recordset);
-        var len = result.recordset.length;
-        if(len === 0){
+        
+        
+        if(result.recordset === undefined){
           result_text = "해당 사원이 존재하지 않습니다.";
         }
         else{
