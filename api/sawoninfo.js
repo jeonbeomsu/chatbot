@@ -64,6 +64,7 @@ exports.data = function(req, res) {
       })
       .catch(err => {
           console.log(err.message);
+          sql.close();   
       })
     });
   };
