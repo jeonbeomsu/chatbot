@@ -20,14 +20,7 @@ app.use('/api', apiRouter);
 
 // [Server Config]
 global.sql = require('mssql');
-global.config = {
-user: 'sa',
-password: 'sfaadmin',
-server: '192.168.0.14',
-database: 'mdb'
-};
-
-
+global.config = require('./config.json');
 
 
 var say = require('./api/sayHello');
@@ -51,10 +44,6 @@ apiRouter.post('/freedays', freedays.data);
 apiRouter.post('/mydays', mydays.data);
 apiRouter.post('/resource', resource.data);
 
-
-// Gloabal Variable
-var domain = "http://218.38.191.120:3000/";
-global.domain = domain;
 
 
 app.listen(3000, function() {
