@@ -56,7 +56,7 @@ exports.data = function(req, res) {
             {
               "label": "다시 검색",
               "action": "block",
-              "messageText": yyyy + "자원예약 조회",
+              "messageText": "자원예약 조회",
               "blockId": req.body.userRequest.block.id
             }
           ]
