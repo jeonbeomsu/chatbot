@@ -1,7 +1,7 @@
 exports.data = function(req, res) {
 
   var date = JSON.parse(req.body.action.params.sys_plugin_date);
-  var res = req.body.action.params.sys_res;
+  var resource = req.body.action.params.sys_res;
 
   console.log(date.value);
 
@@ -22,7 +22,7 @@ exports.data = function(req, res) {
 
   sql.connect(config).then( pool => {
     pool.request()
-    .input('PART_NM', res)
+    .input('PART_NM', resource)
     .input('ST_DT', date.value)
     .query(query)
     .then(result => {
