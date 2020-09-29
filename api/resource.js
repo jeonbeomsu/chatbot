@@ -3,7 +3,7 @@ exports.data = function(req, res) {
   var date = JSON.parse(req.body.action.params.sys_plugin_date);
   var res = req.body.action.params.sys_res;
 
-  console.log(date);
+  console.log(date+1);
 
 
   var result_text = "";
