@@ -3,7 +3,7 @@ exports.data = function(req, res) {
   var date = JSON.parse(req.body.action.params.sys_plugin_date);
   var res = req.body.action.params.sys_res;
 
-  console.log(date+1);
+  console.log(date.value);
 
 
   var result_text = "";
@@ -17,12 +17,13 @@ exports.data = function(req, res) {
   query = query + "FROM   cm012m01 ";
   query = query + "WHERE major_cd='GW21' ";
   query = query + ") D ON A.RES_CD = D.PART_CD ";
-  query = query + "WHERE A.ST_DT BETWEEN '2020-07-02' AND '2020-07-03' ";
+  query = query + "WHERE CONVERT(CHAR(10), A.ST_DT, 23) = @ST_DT ";
   query = query + "AND D.PART_NM = @PART_NM ";
 
   sql.connect(config).then( pool => {
     pool.request()
     .input('PART_NM', res)
+    .input('ST_DT', date.value)
     .query(query)
     .then(result => {
       var len = result.recordset.length;
