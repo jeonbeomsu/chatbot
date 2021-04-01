@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 const apiRouter = express.Router();
 
+
 app.use(express.static('public'));
 app.use(logger('dev', {}));
 app.use(bodyParser.json());
